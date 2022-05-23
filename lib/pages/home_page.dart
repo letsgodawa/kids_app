@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:kids_app/models/topic_models.dart';
-import 'package:kids_app/pages/alphabet_page.dart';
+import 'package:kids_app/pages/nepali_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
@@ -82,13 +82,12 @@ class _HomePageState extends State<HomePage> {
                       crossAxisCount: 2,
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20
-                      
                     ), 
                     itemCount: topics.length,
                     itemBuilder: (BuildContext ctx, index){
                       return InkWell(
                         onTap: (){
-                          Navigator.push(context,MaterialPageRoute(builder: (context) =>  AlphabetPage()),
+                          Navigator.push(context,MaterialPageRoute(builder: (context) =>  NepaliPage()),
                         );
                         },
                         child: Container(

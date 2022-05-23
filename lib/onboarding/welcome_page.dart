@@ -33,7 +33,7 @@ class WelcomePage extends StatelessWidget {
                   ),
                   child:  TextField(
                     controller: nameController,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       border: InputBorder.none,
                       labelText: 'Enter Your Name',
                       
