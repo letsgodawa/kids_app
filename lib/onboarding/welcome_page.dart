@@ -36,7 +36,6 @@ class WelcomePage extends StatelessWidget {
                     decoration: const InputDecoration(
                       border: InputBorder.none,
                       labelText: 'Enter Your Name',
-                      
                     ),
                   ),
                 ),

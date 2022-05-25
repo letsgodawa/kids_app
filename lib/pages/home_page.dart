@@ -2,7 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:kids_app/models/topic_models.dart';
+import 'package:kids_app/pages/alphabet_page.dart';
 import 'package:kids_app/pages/nepali_page.dart';
+import 'package:kids_app/pages/numbers_page.dart';
+import 'package:kids_app/pages/shape_pages.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
@@ -59,7 +62,10 @@ class _HomePageState extends State<HomePage> {
                         child: const CircleAvatar(
                          backgroundImage: NetworkImage("https://media.istockphoto.com/photos/beautiful-happy-boy-with-painted-hands-picture-id1207261035?k=20&m=1207261035&s=612x612&w=0&h=aEzfrUNuXjGHGhLa0Eet4yGHzsFu3BGsD1W8xu_2UJM="),),
                       ),
-                      const Icon(Icons.search_outlined)
+                      IconButton(onPressed: (){
+                        showSearch(context: context,
+                        delegate: CustomSearchDelegate(), );
+                      }, icon: const Icon(Icons.search))
                     ],
                   ),
                 ),
@@ -87,8 +93,35 @@ class _HomePageState extends State<HomePage> {
                     itemBuilder: (BuildContext ctx, index){
                       return InkWell(
                         onTap: (){
-                          Navigator.push(context,MaterialPageRoute(builder: (context) =>  NepaliPage()),
-                        );
+                            if (index == 0) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => NumbersPage()),
+                              );
+                            }
+                            if (index == 1) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => AlphabetPage()),
+                              );
+                            }
+                            if (index == 2) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => NepaliPage()),
+                              );
+                            }
+                            if (index == 3) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ShapePages()),
+                              );
+                            }
+                          
                         },
                         child: Container(
                         alignment: Alignment.center,
@@ -121,4 +154,66 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+}
+
+class CustomSearchDelegate extends SearchDelegate{
+  List<String> searchTerms= [
+   'apple', 'banana', 'cat', 'dog', 'egg', 'fish', 'grass',
+  ];
+  @override
+  List<Widget>? buildActions(BuildContext context) {
+  return[
+    IconButton(onPressed: (){
+      query='';
+    }, icon: const Icon(Icons.clear))
+  ];
+  }
+
+   @override
+  Widget? buildLeading(BuildContext context) {
+    return
+      IconButton(onPressed: (){
+        close(context, null);
+      }, icon:const Icon(Icons.arrow_back)
+      );
+    
+  
+  }
+  @override
+  Widget buildResults(BuildContext context) {
+   List<String> matchQuery=[];
+   for(var cat in searchTerms){
+     if(cat.toLowerCase().contains(query.toLowerCase())){
+       matchQuery.add(cat);
+     }   
+   }
+   return ListView.builder(
+       itemCount: matchQuery.length,
+       itemBuilder:(context, index){
+       var result =matchQuery[index];
+       return ListTile(
+         title: Text(result),
+       );
+       } 
+     );
+  
+  }
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    List<String> matchQuery=[];
+    for(var cat in searchTerms){
+     if(cat.toLowerCase().contains(query.toLowerCase())){
+       matchQuery.add(cat);
+     }   
+  }
+  return  ListView.builder(
+       itemCount: matchQuery.length,
+       itemBuilder:(context, index){
+       var result =matchQuery[index];
+       return ListTile(
+         title: Text(result),
+       );
+       } 
+     );
+}
 }
