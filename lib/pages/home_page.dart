@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:kids_app/models/topic_models.dart';
+import 'package:kids_app/pages/alphabet_game.dart';
 import 'package:kids_app/pages/alphabet_page.dart';
 import 'package:kids_app/pages/nepali_page.dart';
 import 'package:kids_app/pages/numbers_page.dart';
@@ -59,8 +60,18 @@ class _HomePageState extends State<HomePage> {
                       Container(
                         height: 50,
                         width: 50,
-                        child: const CircleAvatar(
-                         backgroundImage: NetworkImage("https://media.istockphoto.com/photos/beautiful-happy-boy-with-painted-hands-picture-id1207261035?k=20&m=1207261035&s=612x612&w=0&h=aEzfrUNuXjGHGhLa0Eet4yGHzsFu3BGsD1W8xu_2UJM="),),
+                        child: InkWell(
+                          onTap: (){
+                             showDialog(context: context, 
+          builder: (context)=> AlertDialog(
+            content: Image(image: NetworkImage("https://media.istockphoto.com/photos/beautiful-happy-boy-with-painted-hands-picture-id1207261035?k=20&m=1207261035&s=612x612&w=0&h=aEzfrUNuXjGHGhLa0Eet4yGHzsFu3BGsD1W8xu_2UJM=")),
+        
+          )        
+          );
+                          },
+                          child: const CircleAvatar(
+                           backgroundImage: NetworkImage("https://media.istockphoto.com/photos/beautiful-happy-boy-with-painted-hands-picture-id1207261035?k=20&m=1207261035&s=612x612&w=0&h=aEzfrUNuXjGHGhLa0Eet4yGHzsFu3BGsD1W8xu_2UJM="),),
+                        ),
                       ),
                       IconButton(onPressed: (){
                         showSearch(context: context,
@@ -75,7 +86,7 @@ class _HomePageState extends State<HomePage> {
               child:const Text('Hello',style: TextStyle(fontSize: 25, fontWeight: FontWeight.w200, color: Colors.black87), )),
               Container(
                 padding:const EdgeInsets.only(left: 20),
-                child: Text(name,style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold), )),
+                child: Text(name,style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold), )),
                const SizedBox(
                  height:20,
                ),
@@ -121,7 +132,11 @@ class _HomePageState extends State<HomePage> {
                                     builder: (context) => ShapePages()),
                               );
                             }
-                          
+                            if(index==4){
+                              Navigator.push(context, 
+                              MaterialPageRoute(builder: (context)=>AlphabetGame())
+                              );
+                            }
                         },
                         child: Container(
                         alignment: Alignment.center,

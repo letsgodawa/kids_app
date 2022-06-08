@@ -1,13 +1,23 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:kids_app/models/shape_models.dart';
 
-class ShapePages extends StatelessWidget {
+class ShapePages extends StatefulWidget {
   const ShapePages({ Key? key }) : super(key: key);
 
+  @override
+  State<ShapePages> createState() => _ShapePagesState();
+}
+
+class _ShapePagesState extends State<ShapePages> {
+  AudioCache audioCache=AudioCache();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(backgroundColor: Colors.white,
+      leading: IconButton(onPressed: (){
+             Navigator.pop(context);
+            }, icon:const Icon(Icons.arrow_back, color: Colors.orangeAccent,)),
           elevation: 0,
             title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -16,7 +26,13 @@ class ShapePages extends StatelessWidget {
               Text('Shapes',style: TextStyle(color: Colors.orangeAccent, fontWeight: FontWeight.bold),),
               Icon(Icons.circle, color: Colors.orangeAccent,)
             ],
-          ),) ,
+          ),
+          actions: [
+            IconButton(onPressed: (){
+
+            }, icon:const  Icon(Icons.search, color: Colors.orangeAccent,))
+          ],
+          ) ,
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: GridView.builder(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -26,21 +42,273 @@ class ShapePages extends StatelessWidget {
         ),
         itemCount: shapes.length,
          itemBuilder: (BuildContext ctx, index){
-           return Container(
-                            height: 30,
-                            width: 30,
-                          alignment: Alignment.center,                  
-                          decoration:  BoxDecoration(
-                            color: Colors.white,
-                            border: Border.all(color: Color.fromARGB(255, 255, 207, 136),
-                            width: 2
-                            ),
-                            borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(image:AssetImage(shapes[index].image),
-                          fit: BoxFit.cover
-                           )
-                          )
-                          );
+           return  InkWell(
+            onTap: (){
+          if(index==0){
+                 {
+                            showDialog(context: context, 
+          builder: (context)=> AlertDialog(
+            content: Image(image: AssetImage("img/shapes/circle.jpg")),
+            actions: [
+              
+              
+              Center(
+                child: CircleAvatar(
+                  backgroundColor: Colors.orangeAccent,
+                  radius: 35,
+                  child: IconButton(onPressed: (){
+              setState(() {
+                audioCache.load('1.mp3');
+                audioCache.play('1.mp3');
+              });
+            }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
+                ),
+                
+              ),
+              TextButton(onPressed: (){
+                Navigator.pop(context);
+              }, child: Text('Cancel', style: TextStyle(color: Color.fromARGB(255, 255, 139, 131)),))
+            ],
+          )        
+          );
+                          }
+               }
+          if(index==1){
+  showDialog(context: context, 
+          builder: (context)=> AlertDialog(
+            content: Image(image: AssetImage("img/shapes/ellipse.jpg")),
+            actions: [
+              
+              
+              Center(
+                child: CircleAvatar(
+                  backgroundColor: Colors.orangeAccent,
+                  radius: 35,
+                  child: IconButton(onPressed: (){
+              setState(() {
+                audioCache.load('2.mp3');
+                audioCache.play('2.mp3');
+              });
+            }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
+                ),
+                
+              ),
+              TextButton(onPressed: (){
+                Navigator.pop(context);
+              }, child: Text('Cancel', style: TextStyle(color: Color.fromARGB(255, 255, 139, 131)),))
+            ],
+          )        
+          );
+          }    
+
+          if(index==2){
+  showDialog(context: context, 
+          builder: (context)=> AlertDialog(
+            content: Image(image: AssetImage("img/shapes/heart.jpg")),
+            actions: [
+              
+              
+              Center(
+                child: CircleAvatar(
+                  backgroundColor: Colors.orangeAccent,
+                  radius: 35,
+                  child: IconButton(onPressed: (){
+              setState(() {
+                audioCache.load('3.mp3');
+                audioCache.play('3.mp3');
+              });
+            }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
+                ),
+                
+              ),
+              TextButton(onPressed: (){
+                Navigator.pop(context);
+              }, child: Text('Cancel', style: TextStyle(color: Color.fromARGB(255, 255, 139, 131)),))
+            ],
+          )        
+          );
+          }    
+           if(index==3){
+  showDialog(context: context, 
+          builder: (context)=> AlertDialog(
+            content: Image(image: AssetImage("img/shapes/hexagon.jpg")),
+            actions: [
+              
+              
+              Center(
+                child: CircleAvatar(
+                  backgroundColor: Colors.orangeAccent,
+                  radius: 35,
+                  child: IconButton(onPressed: (){
+              setState(() {
+                audioCache.load('4.mp3');
+                audioCache.play('4.mp3');
+              });
+            }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
+                ),
+                
+              ),
+              TextButton(onPressed: (){
+                Navigator.pop(context);
+              }, child: Text('Cancel', style: TextStyle(color: Color.fromARGB(255, 255, 139, 131)),))
+            ],
+          )        
+          );
+          } 
+             if(index==4){
+  showDialog(context: context, 
+          builder: (context)=> AlertDialog(
+            content: Image(image: AssetImage("img/shapes/rectangle.jpg")),
+            actions: [
+              
+              
+              Center(
+                child: CircleAvatar(
+                  backgroundColor: Colors.orangeAccent,
+                  radius: 35,
+                  child: IconButton(onPressed: (){
+              setState(() {
+                audioCache.load('5.mp3');
+                audioCache.play('5.mp3');
+              });
+            }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
+                ),
+                
+              ),
+              TextButton(onPressed: (){
+                Navigator.pop(context);
+              }, child: Text('Cancel', style: TextStyle(color: Color.fromARGB(255, 255, 139, 131)),))
+            ],
+          )        
+          );
+          }
+          if(index==5){
+  showDialog(context: context, 
+          builder: (context)=> AlertDialog(
+            content: Image(image: AssetImage("img/shapes/rhombus.jpg")),
+            actions: [
+              
+              
+              Center(
+                child: CircleAvatar(
+                  backgroundColor: Colors.orangeAccent,
+                  radius: 35,
+                  child: IconButton(onPressed: (){
+              setState(() {
+                audioCache.load('6.mp3');
+                audioCache.play('6.mp3');
+              });
+            }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
+                ),
+                
+              ),
+              TextButton(onPressed: (){
+                Navigator.pop(context);
+              }, child: Text('Cancel', style: TextStyle(color: Color.fromARGB(255, 255, 139, 131)),))
+            ],
+          )        
+          );
+          }
+          if(index==6){
+  showDialog(context: context, 
+          builder: (context)=> AlertDialog(
+            content: Image(image: AssetImage("img/shapes/square.jpg")),
+            actions: [
+              
+              
+              Center(
+                child: CircleAvatar(
+                  backgroundColor: Colors.orangeAccent,
+                  radius: 35,
+                  child: IconButton(onPressed: (){
+              setState(() {
+                audioCache.load('7.mp3');
+                audioCache.play('7.mp3');
+              });
+            }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
+                ),
+                
+              ),
+              TextButton(onPressed: (){
+                Navigator.pop(context);
+              }, child: Text('Cancel', style: TextStyle(color: Color.fromARGB(255, 255, 139, 131)),))
+            ],
+          )        
+          );
+          }    
+          if(index==7){
+  showDialog(context: context, 
+          builder: (context)=> AlertDialog(
+            content: Image(image: AssetImage("img/shapes/Star.jpg")),
+            actions: [
+              
+              
+              Center(
+                child: CircleAvatar(
+                  backgroundColor: Colors.orangeAccent,
+                  radius: 35,
+                  child: IconButton(onPressed: (){
+              setState(() {
+                audioCache.load('8.mp3');
+                audioCache.play('8.mp3');
+              });
+            }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
+                ),
+                
+              ),
+              TextButton(onPressed: (){
+                Navigator.pop(context);
+              }, child: Text('Cancel', style: TextStyle(color: Color.fromARGB(255, 255, 139, 131)),))
+            ],
+          )        
+          );
+          }
+          if(index==8){
+  showDialog(context: context, 
+          builder: (context)=> AlertDialog(
+            content: Image(image: AssetImage("img/shapes/triangle.jpg")),
+            actions: [
+              
+              
+              Center(
+                child: CircleAvatar(
+                  backgroundColor: Colors.orangeAccent,
+                  radius: 35,
+                  child: IconButton(onPressed: (){
+              setState(() {
+                audioCache.load('9.mp3');
+                audioCache.play('9.mp3');
+              });
+            }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
+                ),
+                
+              ),
+              TextButton(onPressed: (){
+                Navigator.pop(context);
+              }, child: Text('Cancel', style: TextStyle(color: Color.fromARGB(255, 255, 139, 131)),))
+            ],
+          )        
+          );
+          }        
+            },
+            
+             child: Container(
+                                height: 30,
+                                width: 30,
+                              alignment: Alignment.center,                  
+                              decoration:  BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(color: Color.fromARGB(255, 255, 207, 136),
+                                width: 2
+                                ),
+                                borderRadius: BorderRadius.circular(20),
+                              image: DecorationImage(image:AssetImage(shapes[index].image),
+                              fit: BoxFit.cover
+                               )
+                              )
+                              
+             ),
+           );
          }
          ),
       )

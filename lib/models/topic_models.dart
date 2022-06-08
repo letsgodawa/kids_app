@@ -12,10 +12,12 @@ TopicModel numbers=TopicModel(name: "Numbers", image: "https://media.istockphoto
 TopicModel alphabets=TopicModel(name: "Alphabets", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiCSDF8c1e5uo-f9YHKB6fP7tDyh2MxVHjwu4gCrqeqDk6z53Wk-OsQQQxINSc0dDdhZ4&usqp=CAU");
 TopicModel nepali=TopicModel(name: "Nepali", image: "https://cdn1.storehippo.com/s/58b6b898fe14ad9f7ef50fb8/5f2677578a3bca24381d666f/webp/nepali-alphabet-cube-640x640.jpg");
 TopicModel shapes=TopicModel(name: "Shapes", image: "https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/512x512/shapes.png");
+TopicModel play=TopicModel(name: "Games", image: "https://media.baamboozle.com/uploads/images/76563/1615277978_28734.jpeg");
 
 final List<TopicModel> topics=[
   numbers,
   alphabets,
   nepali,
-  shapes
+  shapes,
+  play,
 ];

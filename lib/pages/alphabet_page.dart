@@ -1,6 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:kids_app/pages/audio_page.dart';
+
 
 
 import '../models/alphabet_models.dart';
@@ -28,6 +28,9 @@ class _AlphabetPageState extends State<AlphabetPage> {
         ),
         child: Scaffold(
           appBar: AppBar(backgroundColor: Colors.white,
+          leading: IconButton(onPressed: (){
+             Navigator.pop(context);
+            }, icon: Icon(Icons.arrow_back, color: Colors.orangeAccent,)),
           elevation: 0,
             title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
