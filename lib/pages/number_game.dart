@@ -149,7 +149,7 @@ class _NumberGameState extends State<NumberGame> {
                             onDragCompleted:(){
                                   bool condition = numberModels.id == number[index].id ;
                              
-                             condition ?  audioCache.play('Correct.mp3') : audioCache.play('Wrong.mp3');;
+                             condition ?  audioCache.play('Correct.mp3') : audioCache.play('Wrong.mp3');
                              
 
                               ScaffoldMessenger.of(context).clearSnackBars();

@@ -149,7 +149,7 @@ class _NepaliGameState extends State<NepaliGame> {
                             onDragCompleted:(){
                                   bool condition = nepaliModels.id == nepali[index].id ;
                              
-                             condition ?  audioCache.play('Correct.mp3') : audioCache.play('Wrong.mp3');;
+                             condition ?  audioCache.play('Correct.mp3') : audioCache.play('Wrong.mp3');
                              
 
                               ScaffoldMessenger.of(context).clearSnackBars();

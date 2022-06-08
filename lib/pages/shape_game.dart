@@ -37,12 +37,12 @@ class _ShapeGameState extends State<ShapeGame> {
             child: Row(
              
               children: [
-                Text("Exit ", style: TextStyle(color: Colors.orangeAccent, fontWeight: FontWeight.w500, fontSize: 20),),
+                Text("Home ", style: TextStyle(color: Colors.orangeAccent, fontWeight: FontWeight.w500, fontSize: 20),),
                 IconButton(onPressed: (){
                       Navigator.push(context, 
                                   MaterialPageRoute(builder: (context)=>HomePage())
                                   );
-                }, icon: const Icon(Icons.close_sharp,color: Colors.orangeAccent)),
+                }, icon: const Icon(Icons.home,color: Colors.orangeAccent)),
               ],
             ),
           )],
@@ -75,7 +75,7 @@ class _ShapeGameState extends State<ShapeGame> {
                  
                    builder: (context, _, __){
                    return CircleAvatar(
-                     radius: 80,
+                     radius: 100,
                      backgroundImage: AssetImage(shapeModels.image),
                    );
                  },
@@ -152,7 +152,7 @@ class _ShapeGameState extends State<ShapeGame> {
                             onDragCompleted:(){
                                   bool condition = shapeModels.id == shapes[index].id ;
                              
-                             condition ?  audioCache.play('Correct.mp3') : audioCache.play('Wrong.mp3');;
+                             condition ?  audioCache.play('Correct.mp3') : audioCache.play('Wrong.mp3');
                              
 
                               ScaffoldMessenger.of(context).clearSnackBars();

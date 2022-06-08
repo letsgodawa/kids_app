@@ -15,7 +15,7 @@ class WelcomePage extends StatelessWidget {
               height: double.maxFinite,
               width: double.maxFinite,
                decoration:const BoxDecoration(
-              image: DecorationImage(image: NetworkImage("https://i.pinimg.com/originals/39/71/c6/3971c6373546929debe29e0da138efe9.jpg"),
+              image: DecorationImage(image: AssetImage("img/welcome.jpg"),
               fit:BoxFit.cover
               ),
               

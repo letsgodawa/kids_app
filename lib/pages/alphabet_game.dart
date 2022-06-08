@@ -149,7 +149,7 @@ class _AlphabetGameState extends State<AlphabetGame> {
                             onDragCompleted:(){
                                   bool condition = alphabetMOdel.id == alphabet[index].id ;
                              
-                             condition ?  audioCache.play('Correct.mp3') : audioCache.play('Wrong.mp3');;
+                             condition ?  audioCache.play('Correct.mp3') : audioCache.play('Wrong.mp3');
                              
 
                               ScaffoldMessenger.of(context).clearSnackBars();
