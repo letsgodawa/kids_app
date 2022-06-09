@@ -56,7 +56,8 @@ class WelcomePage extends StatelessWidget {
                     ),
                     child: Center(child: Text('Get Started', style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.white),)),
                   ),
-                )
+                ),
+                
                ],
             ),
               ),
