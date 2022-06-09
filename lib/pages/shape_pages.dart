@@ -45,6 +45,9 @@ class _ShapePagesState extends State<ShapePages> {
            return  InkWell(
             onTap: (){
           if(index==0){
+            setState(() {
+                audioCache.play('circle.mp3');
+              });
                  {
                             showDialog(context: context, 
           builder: (context)=> AlertDialog(
@@ -58,8 +61,8 @@ class _ShapePagesState extends State<ShapePages> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('1.mp3');
-                audioCache.play('1.mp3');
+                audioCache.load('circle.mp3');
+                audioCache.play('circle.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -74,6 +77,9 @@ class _ShapePagesState extends State<ShapePages> {
                           }
                }
           if(index==1){
+              setState(() {
+                audioCache.play('ellipse.mp3');
+              });
   showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/shapes/ellipse.jpg")),
@@ -86,8 +92,8 @@ class _ShapePagesState extends State<ShapePages> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('2.mp3');
-                audioCache.play('2.mp3');
+                audioCache.load('ellipse.mp3');
+                audioCache.play('ellipse.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -102,6 +108,9 @@ class _ShapePagesState extends State<ShapePages> {
           }    
 
           if(index==2){
+              setState(() {
+                audioCache.play('heart.mp3');
+              });
   showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/shapes/heart.jpg")),
@@ -114,8 +123,8 @@ class _ShapePagesState extends State<ShapePages> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('3.mp3');
-                audioCache.play('3.mp3');
+                audioCache.load('heart.mp3');
+                audioCache.play('heart.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -129,6 +138,9 @@ class _ShapePagesState extends State<ShapePages> {
           );
           }    
            if(index==3){
+               setState(() {
+                audioCache.play('hexagon.mp3');
+              });
   showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/shapes/hexagon.jpg")),
@@ -141,8 +153,8 @@ class _ShapePagesState extends State<ShapePages> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('4.mp3');
-                audioCache.play('4.mp3');
+                audioCache.load('hexagon.mp3');
+                audioCache.play('hexagon.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -156,6 +168,9 @@ class _ShapePagesState extends State<ShapePages> {
           );
           } 
              if(index==4){
+                 setState(() {
+                audioCache.play('rectangle.mp3');
+              });
   showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/shapes/rectangle.jpg")),
@@ -168,8 +183,8 @@ class _ShapePagesState extends State<ShapePages> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('5.mp3');
-                audioCache.play('5.mp3');
+                audioCache.load('rectangle.mp3');
+                audioCache.play('rectangle.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -183,6 +198,9 @@ class _ShapePagesState extends State<ShapePages> {
           );
           }
           if(index==5){
+              setState(() {
+                audioCache.play('rhombus.mp3');
+              });
   showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/shapes/rhombus.jpg")),
@@ -195,8 +213,8 @@ class _ShapePagesState extends State<ShapePages> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('6.mp3');
-                audioCache.play('6.mp3');
+                audioCache.load('rhombus.mp3');
+                audioCache.play('rhombus.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -210,6 +228,9 @@ class _ShapePagesState extends State<ShapePages> {
           );
           }
           if(index==6){
+              setState(() {
+                audioCache.play('square.mp3');
+              });
   showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/shapes/square.jpg")),
@@ -222,8 +243,8 @@ class _ShapePagesState extends State<ShapePages> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('7.mp3');
-                audioCache.play('7.mp3');
+                audioCache.load('square.mp3');
+                audioCache.play('square.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -237,6 +258,9 @@ class _ShapePagesState extends State<ShapePages> {
           );
           }    
           if(index==7){
+              setState(() {
+                audioCache.play('star.mp3');
+              });
   showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/shapes/Star.jpg")),
@@ -249,8 +273,8 @@ class _ShapePagesState extends State<ShapePages> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('8.mp3');
-                audioCache.play('8.mp3');
+                audioCache.load('star.mp3');
+                audioCache.play('star.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -264,6 +288,9 @@ class _ShapePagesState extends State<ShapePages> {
           );
           }
           if(index==8){
+              setState(() {
+                audioCache.play('triangle.mp3');
+              });
   showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/shapes/triangle.jpg")),
@@ -276,8 +303,8 @@ class _ShapePagesState extends State<ShapePages> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('9.mp3');
-                audioCache.play('9.mp3');
+                audioCache.load('triangle.mp3');
+                audioCache.play('triangle.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),

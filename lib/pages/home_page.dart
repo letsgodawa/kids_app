@@ -226,9 +226,17 @@ class CustomSearchDelegate extends SearchDelegate{
        itemBuilder:(context, index){
        var result =matchQuery[index];
        return ListTile(
-         title: Text(result),
+         title: InkWell(
+           onTap: (){
+              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => AlphabetPage ()),
+                              );
+           },
+           child: Text(result)),
        );
        } 
      );
-}
+} 
 }

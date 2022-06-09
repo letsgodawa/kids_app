@@ -43,7 +43,11 @@ class _NepaliPageState extends State<NepaliPage> {
          itemBuilder: (BuildContext ctx, index){
            return InkWell(
              onTap: (){
+            
                if(index==0){
+                 setState(() {
+                   audioCache.play('001.mp3');
+                 });
                             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/1.jpg")),
@@ -56,8 +60,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('a.mp3');
-                audioCache.play('a.mp3');
+                audioCache.load('001.mp3');
+                audioCache.play('001.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -71,6 +75,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
                           }
           if(index==1){
+            setState(() {
+                audioCache.play('002.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image:AssetImage("img/nepali/2.jpg")),
@@ -83,8 +90,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('b.mp3');
-                audioCache.play('b.mp3');
+                audioCache.load('002.mp3');
+                audioCache.play('002.mp3');
               });
             }, icon:Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -98,6 +105,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==2){
+            setState(() {
+                audioCache.play('003.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/3.jpg")),
@@ -110,8 +120,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('c.mp3');
-                audioCache.play('c.mp3');
+                audioCache.load('003.mp3');
+                audioCache.play('003.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -125,6 +135,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==3){
+            setState(() {
+                audioCache.play('004.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image:AssetImage("img/nepali/4.jpg")),
@@ -137,8 +150,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('d.mp3');
-                audioCache.play('d.mp3');
+                audioCache.load('004.mp3');
+                audioCache.play('004.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -152,6 +165,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==4){
+            setState(() {
+                audioCache.play('005.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/5.jpg")),
@@ -164,8 +180,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('e.mp3');
-                audioCache.play('e.mp3');
+                audioCache.load('005.mp3');
+                audioCache.play('005.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -179,6 +195,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==5){
+            setState(() {
+                audioCache.play('006.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/6.jpg")),
@@ -191,8 +210,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('f.mp3');
-                audioCache.play('f.mp3');
+                audioCache.load('006.mp3');
+                audioCache.play('006.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -206,6 +225,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==6){
+            setState(() {
+                audioCache.play('007.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/7.jpg")),
@@ -218,8 +240,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('g.mp3');
-                audioCache.play('g.mp3');
+                audioCache.load('009.mp3');
+                audioCache.play('009.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -233,6 +255,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==7){
+            setState(() {
+                audioCache.play('008.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/8.jpg")),
@@ -245,8 +270,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('h.mp3');
-                audioCache.play('h.mp3');
+                audioCache.load('008.mp3');
+                audioCache.play('008.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -260,6 +285,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==8){
+            setState(() {
+                audioCache.play('009.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image:AssetImage("img/nepali/9.jpg")),
@@ -272,8 +300,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('i.mp3');
-                audioCache.play('i.mp3');
+                audioCache.load('007.mp3');
+                audioCache.play('007.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -287,6 +315,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==9){
+            setState(() {
+                audioCache.play('010.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image:AssetImage("img/nepali/10.jpg")),
@@ -299,8 +330,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('j.mp3');
-                audioCache.play('j.mp3');
+                audioCache.load('010.mp3');
+                audioCache.play('010.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -314,6 +345,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==10){
+            setState(() {
+                audioCache.play('011.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/11.jpg")),
@@ -326,8 +360,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('k.mp3');
-                audioCache.play('k.mp3');
+                audioCache.load('011.mp3');
+                audioCache.play('011.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -341,6 +375,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==11){
+            setState(() {
+                audioCache.play('012.mp3');
+              });
              showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/12.jpg")),
@@ -353,8 +390,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('l.mp3');
-                audioCache.play('l.mp3');
+                audioCache.load('012.mp3');
+                audioCache.play('012.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -368,6 +405,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==12){
+            setState(() {
+                audioCache.play('013.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image:AssetImage("img/nepali/13.jpg")),
@@ -380,8 +420,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('m.mp3');
-                audioCache.play('m.mp3');
+                audioCache.load('013.mp3');
+                audioCache.play('013.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -395,6 +435,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==13){
+            setState(() {
+                audioCache.play('014.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image:AssetImage("img/nepali/14.jpg")),
@@ -407,8 +450,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('n.mp3');
-                audioCache.play('n.mp3');
+                audioCache.load('014.mp3');
+                audioCache.play('014.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -422,6 +465,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==14){
+            setState(() {
+                audioCache.play('015.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/15.jpg")),
@@ -434,8 +480,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('o.mp3');
-                audioCache.play('o.mp3');
+                audioCache.load('015.mp3');
+                audioCache.play('015.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -449,6 +495,9 @@ class _NepaliPageState extends State<NepaliPage> {
             );
           }
           if(index==15){
+            setState(() {
+                audioCache.play('016.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image:AssetImage("img/nepali/16.jpg")),
@@ -461,8 +510,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('p.mp3');
-                audioCache.play('p.mp3');
+                audioCache.load('016.mp3');
+                audioCache.play('016.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -476,6 +525,9 @@ class _NepaliPageState extends State<NepaliPage> {
             );
           }
           if(index==16){
+            setState(() {
+                audioCache.play('017.mp3');
+              });
                             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/17.jpg")),
@@ -488,8 +540,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('a.mp3');
-                audioCache.play('a.mp3');
+                audioCache.load('017.mp3');
+                audioCache.play('017.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -503,6 +555,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
                           }
           if(index==17){
+            setState(() {
+                audioCache.play('018.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/18.jpg")),
@@ -515,8 +570,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('b.mp3');
-                audioCache.play('b.mp3');
+                audioCache.load('018.mp3');
+                audioCache.play('018.mp3');
               });
             }, icon:Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -530,6 +585,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==18){
+            setState(() {
+                audioCache.play('019.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image:AssetImage("img/nepali/19.jpg")),
@@ -542,8 +600,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('c.mp3');
-                audioCache.play('c.mp3');
+                audioCache.load('019.mp3');
+                audioCache.play('019.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -557,6 +615,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==19){
+            setState(() {
+                audioCache.play('020.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/20.jpg")),
@@ -569,8 +630,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('d.mp3');
-                audioCache.play('d.mp3');
+                audioCache.load('020.mp3');
+                audioCache.play('020.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -584,6 +645,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==20){
+            setState(() {
+                audioCache.play('021.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/21.jpg")),
@@ -596,8 +660,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('e.mp3');
-                audioCache.play('e.mp3');
+                audioCache.load('021.mp3');
+                audioCache.play('021.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -611,6 +675,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==21){
+            setState(() {
+                audioCache.play('022.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/22.jpg")),
@@ -623,8 +690,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('f.mp3');
-                audioCache.play('f.mp3');
+                audioCache.load('022.mp3');
+                audioCache.play('022.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -638,6 +705,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==22){
+            setState(() {
+                audioCache.play('023.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/23.jpg")),
@@ -650,8 +720,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('g.mp3');
-                audioCache.play('g.mp3');
+                audioCache.load('023.mp3');
+                audioCache.play('023.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -665,6 +735,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==23){
+            setState(() {
+                audioCache.play('024.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image:AssetImage("img/nepali/24.jpg")),
@@ -677,8 +750,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('h.mp3');
-                audioCache.play('h.mp3');
+                audioCache.load('024.mp3');
+                audioCache.play('024.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -692,6 +765,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==24){
+            setState(() {
+                audioCache.play('025.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/25.jpg")),
@@ -704,8 +780,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('i.mp3');
-                audioCache.play('i.mp3');
+                audioCache.load('025.mp3');
+                audioCache.play('025.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -719,6 +795,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==25){
+            setState(() {
+                audioCache.play('026.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/26.jpg")),
@@ -731,8 +810,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('j.mp3');
-                audioCache.play('j.mp3');
+                audioCache.load('026.mp3');
+                audioCache.play('026.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -746,6 +825,10 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==26){
+            setState(() {
+               
+                audioCache.play('027.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image:AssetImage("img/nepali/27.jpg")),
@@ -758,8 +841,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('k.mp3');
-                audioCache.play('k.mp3');
+                audioCache.load('027.mp3');
+                audioCache.play('027.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -773,6 +856,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==27){
+            setState(() {
+                audioCache.play('028.mp3');
+              });
              showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/28.jpg")),
@@ -785,8 +871,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('l.mp3');
-                audioCache.play('l.mp3');
+                audioCache.load('028.mp3');
+                audioCache.play('028.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -800,6 +886,10 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==28){
+            setState(() {
+               
+                audioCache.play('029.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/29.jpg")),
@@ -812,8 +902,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('m.mp3');
-                audioCache.play('m.mp3');
+                audioCache.load('029.mp3');
+                audioCache.play('029.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -827,6 +917,10 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==29){
+            setState(() {
+                audioCache.load('030.mp3');
+                audioCache.play('030.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image:AssetImage("img/nepali/30.jpg")),
@@ -839,8 +933,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('n.mp3');
-                audioCache.play('n.mp3');
+                audioCache.load('030.mp3');
+                audioCache.play('030.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -854,6 +948,9 @@ class _NepaliPageState extends State<NepaliPage> {
           );
           }
           if(index==30){
+            setState(() {
+                audioCache.play('031.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/31.jpg")),
@@ -866,8 +963,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('o.mp3');
-                audioCache.play('o.mp3');
+                audioCache.load('031.mp3');
+                audioCache.play('031.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -881,6 +978,10 @@ class _NepaliPageState extends State<NepaliPage> {
             );
           }
           if(index==31){
+            setState(() {
+               
+                audioCache.play('032.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/32.jpg")),
@@ -893,8 +994,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('p.mp3');
-                audioCache.play('p.mp3');
+                audioCache.load('032.mp3');
+                audioCache.play('032.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -908,6 +1009,10 @@ class _NepaliPageState extends State<NepaliPage> {
             );
           }
           if(index==32){
+            setState(() {
+                
+                audioCache.play('033.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/33.jpg")),
@@ -920,8 +1025,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('p.mp3');
-                audioCache.play('p.mp3');
+                audioCache.load('033.mp3');
+                audioCache.play('033.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -935,6 +1040,10 @@ class _NepaliPageState extends State<NepaliPage> {
             );
           }
           if(index==33){
+            setState(() {
+               
+                audioCache.play('034.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image: AssetImage("img/nepali/34.jpg")),
@@ -947,8 +1056,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('p.mp3');
-                audioCache.play('p.mp3');
+                audioCache.load('034.mp3');
+                audioCache.play('034.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -962,6 +1071,10 @@ class _NepaliPageState extends State<NepaliPage> {
             );
           }
           if(index==34){
+            setState(() {
+               
+                audioCache.play('035.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image:AssetImage("img/nepali/35.jpg")),
@@ -974,8 +1087,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('p.mp3');
-                audioCache.play('p.mp3');
+                audioCache.load('035.mp3');
+                audioCache.play('035.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
@@ -989,6 +1102,9 @@ class _NepaliPageState extends State<NepaliPage> {
             );
           }
           if(index==35){
+            setState(() {
+                audioCache.play('036.mp3');
+              });
             showDialog(context: context, 
           builder: (context)=> AlertDialog(
             content: Image(image:AssetImage("img/nepali/36.jpg")),
@@ -1001,8 +1117,8 @@ class _NepaliPageState extends State<NepaliPage> {
                   radius: 35,
                   child: IconButton(onPressed: (){
               setState(() {
-                audioCache.load('p.mp3');
-                audioCache.play('p.mp3');
+                audioCache.load('036.mp3');
+                audioCache.play('036.mp3');
               });
             }, icon: Icon(Icons.play_arrow, color: Colors.white, size: 30,))
                 ),
